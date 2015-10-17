@@ -22,10 +22,6 @@ textarea:focus {
   opacity: 1;
 }
 
-input:not {
-  opacity: 1;
-}
-
 div.container.new_user h1 {
   font-size: 5em;
 }
