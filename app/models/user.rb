@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   include ActiveModel::Validations
-  validates :name, :address, presence: :true
+  validates :name, :address, :credit_card_type, :city, :state, :zip_code, presence: :true
   validates :credit_card, numericality: { only_integer: true}, length: { minimum: 16, maximum: 16 }
   validates :email, uniqueness: true, presence: :true, confirmation: true, email: true
   validates :email_confirmation, presence: true

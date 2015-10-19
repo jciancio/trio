@@ -1,4 +1,7 @@
+<div class="container">
 <p id="notice"><%= notice %></p>
+
+<h2>Customer Account Information</h2><br>
 
 <p>
   <strong>Name:</strong>
@@ -21,9 +24,30 @@
 </p>
 
 <p>
-  <strong>Credit card:</strong>
+  <strong>City:</strong>
+  <%= @user.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @user.state %>
+</p>
+
+<p>
+  <strong>Zip Code:</strong>
+  <%= @user.zip_code %>
+</p>
+
+<p>
+  <strong>Credit Card Type:</strong>
+  <%= @user.credit_card_type %>
+</p>
+
+<p>
+  <strong>Credit Card:</strong>
   <%= @user.credit_card %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Start Shopping', products_path(@products) %>
+</div>
