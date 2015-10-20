@@ -30,7 +30,7 @@
   </div>
   <div class="field">
     <%= f.label :birthday %>
-    <%= f.date_select :birthday, start_year: 1930  %>
+    <%= f.date_field :birthday, start_year: 1930  %>
   </div>
 </div>
 <div class="container">
@@ -50,14 +50,7 @@
     <%= f.label :zip_code %>
     <%= f.text_field :zip_code %>
   </div>
-  <div class="field">
-    <%= f.label :credit_card_type %>
-    <%= f.text_field :credit_card_type %>
-  </div>
-  <div class="field credit-card">
-    <%= f.label :credit_card %>
-    <%= f.text_field :credit_card %>
-  </div>
+ 
   <div class="actions">
     <%= f.submit %>
   </div>
