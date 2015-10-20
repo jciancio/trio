@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151019173711) do
+ActiveRecord::Schema.define(version: 20151019232105) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "add_dob_to_welcomes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "age_validators", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -26,6 +31,13 @@ ActiveRecord::Schema.define(version: 20151019173711) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "images", force: :cascade do |t|
+    t.string   "title"
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
@@ -33,7 +45,18 @@ ActiveRecord::Schema.define(version: 20151019173711) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.string   "url"
+    t.integer  "user_id"
   end
+
+  add_index "products", ["user_id"], name: "index_products_on_user_id", using: :btree
+
+  create_table "products_users", id: false, force: :cascade do |t|
+    t.integer "user_id",    null: false
+    t.integer "product_id", null: false
+  end
+
+  add_index "products_users", ["product_id", "user_id"], name: "index_products_users_on_product_id_and_user_id", using: :btree
+  add_index "products_users", ["user_id", "product_id"], name: "index_products_users_on_user_id_and_product_id", using: :btree
 
   create_table "reviews", force: :cascade do |t|
     t.text     "comment"
@@ -62,5 +85,6 @@ ActiveRecord::Schema.define(version: 20151019173711) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
+  add_foreign_key "products", "users"
   add_foreign_key "reviews", "products"
 end
