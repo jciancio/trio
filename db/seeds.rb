@@ -8,7 +8,7 @@
 
 # ruby encoding: utf-8
 
-Product.create name: "Beer", description: "Wynwood Brewery", price_in_cents: 500, url: "beer.jpg"
+Product.create name: "Beer", description: "Wynwood Brewery", price_in_cents: 500, url: "wynwood_brew.png"
 Product.create name: "Vodka", description: "Absolut Vodka", price_in_cents: 5000, url: "absolut_vodka.png"
 Product.create name: "Whiskey", description: "Fireball Whiskey", price_in_cents: 1000, url: "fireball.png"
 Product.create name: "Tequila", description: "Patron and Lime", price_in_cents: 3000, url: "patron.png"

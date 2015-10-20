@@ -22,3 +22,7 @@ h1 {
 div.container td {
   font-size: 20em;
 }
+
+input#user_id {
+  width: 25%;
+}
