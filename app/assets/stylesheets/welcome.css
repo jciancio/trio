@@ -24,7 +24,7 @@ div.container .btn:hover {
   color: #ffffff;
 }
 
-body { 
+.welcome#background { 
   background: url("/assets/bg.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
