@@ -6,6 +6,8 @@ group :development do
   gem 'pg'
 end
 
+gem 'stripe'
+
 group :production do
   gem 'pg'
 end
