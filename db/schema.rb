@@ -11,19 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151018165149) do
+=======
+ActiveRecord::Schema.define(version: 20151019232105) do
+>>>>>>> 7754cfd95911a4a51d127b750c00149c469e142c
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "add_dob_to_welcomes", force: :cascade do |t|
+=======
+  create_table "age_validators", force: :cascade do |t|
+>>>>>>> 7754cfd95911a4a51d127b750c00149c469e142c
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
   create_table "images", force: :cascade do |t|
     t.string   "title"
     t.string   "url"
+=======
+  create_table "email_validators", force: :cascade do |t|
+>>>>>>> 7754cfd95911a4a51d127b750c00149c469e142c
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -35,7 +47,18 @@ ActiveRecord::Schema.define(version: 20151018165149) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.string   "url"
+    t.integer  "user_id"
   end
+
+  add_index "products", ["user_id"], name: "index_products_on_user_id", using: :btree
+
+  create_table "products_users", id: false, force: :cascade do |t|
+    t.integer "user_id",    null: false
+    t.integer "product_id", null: false
+  end
+
+  add_index "products_users", ["product_id", "user_id"], name: "index_products_users_on_product_id_and_user_id", using: :btree
+  add_index "products_users", ["user_id", "product_id"], name: "index_products_users_on_user_id_and_product_id", using: :btree
 
   create_table "reviews", force: :cascade do |t|
     t.text     "comment"
@@ -47,16 +70,23 @@ ActiveRecord::Schema.define(version: 20151018165149) do
   add_index "reviews", ["product_id"], name: "index_reviews_on_product_id", using: :btree
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
     t.string   "email"
-    t.date     "dob"
     t.text     "address"
     t.string   "credit_card"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "email_confirmation"
+    t.date     "birthday"
+    t.string   "credit_card_type"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip_code"
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
+  add_foreign_key "products", "users"
   add_foreign_key "reviews", "products"
 end
