@@ -5,3 +5,16 @@
 .table {
   font-size: 2em;
 }
+
+.container.search {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.btn.cart {
+  float: right;
+  padding: 1em;
+}
