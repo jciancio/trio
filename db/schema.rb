@@ -11,31 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20151018165149) do
-=======
 ActiveRecord::Schema.define(version: 20151019232105) do
->>>>>>> 7754cfd95911a4a51d127b750c00149c469e142c
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "add_dob_to_welcomes", force: :cascade do |t|
-=======
-  create_table "age_validators", force: :cascade do |t|
->>>>>>> 7754cfd95911a4a51d127b750c00149c469e142c
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-<<<<<<< HEAD
+  create_table "age_validators", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "email_validators", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "images", force: :cascade do |t|
     t.string   "title"
     t.string   "url"
-=======
-  create_table "email_validators", force: :cascade do |t|
->>>>>>> 7754cfd95911a4a51d127b750c00149c469e142c
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
