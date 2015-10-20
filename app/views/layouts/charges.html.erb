@@ -16,7 +16,7 @@
 
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
-  Stripe.setPublishableKey('pk_test_LTnMfF09mQqrXZIwJ4D19Qd7')
+  Stripe.setPublishableKey('<%= Rails.application.secrets.stripe_publishable_key %>')
 </script>
 </head>
 <body>

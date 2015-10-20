@@ -2,6 +2,11 @@
 
 <h1>Alcohol Selection</h1>
 
+<%= form_tag '/search' do %>
+  <%= search_field_tag :term %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
 <table class="table talbe-striped">
   <thead>
     <tr>

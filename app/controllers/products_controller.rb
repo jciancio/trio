@@ -22,6 +22,11 @@ class ProductsController < ApplicationController
   def edit
   end
 
+  def search
+    @products = Product.where(name: params['term'])
+    render :index
+  end
+
   # POST /products
   # POST /products.json
   def create
