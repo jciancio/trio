@@ -25,8 +25,3 @@ textarea:focus {
 div.container.new_user h1 {
   font-size: 5em;
 }
-
-.field.credit-card {
-  /*text-shadow: 2px 2px 10px white;*/
-  color: white;
-}
