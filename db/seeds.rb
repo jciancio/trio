@@ -8,8 +8,8 @@
 
 # ruby encoding: utf-8
 
-Product.create name: "Beer", description: "Craft Beer", price_in_cents: 500, url: "beer.jpg", user_id: 1
-Product.create name: "Vodka", description: "Triple Distilled", price_in_cents: 5000, url: "beer.jpg", user_id: 1
-Product.create name: "Rum", description: "Spiced Rum", price_in_cents: 1000, url: "beer.jpg", user_id: 1
-Product.create name: "Whiskey", description: "Johnnie Walker", price_in_cents: 3000, url: "beer.jpg", user_id: 1
-Product.create name: "Wine", description: "Cabernet Sauvignon", price_in_cents: 6000, url: "beer.jpg", user_id: 1
+Product.create name: "Beer", description: "Craft Beer", price_in_cents: 500, url: "beer.jpg"
+Product.create name: "Vodka", description: "Triple Distilled", price_in_cents: 5000, url: "beer.jpg"
+Product.create name: "Rum", description: "Spiced Rum", price_in_cents: 1000, url: "beer.jpg"
+Product.create name: "Whiskey", description: "Johnnie Walker", price_in_cents: 3000, url: "beer.jpg"
+Product.create name: "Wine", description: "Cabernet Sauvignon", price_in_cents: 6000, url: "beer.jpg"
