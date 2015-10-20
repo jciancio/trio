@@ -1,4 +1,4 @@
-div.container {
+div.container.wyncoholics {
   margin: 0 auto;
   text-align: center;
 }
@@ -30,6 +30,10 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+div.enter {
+  text-align: center;
 }
 
 .enter a {
