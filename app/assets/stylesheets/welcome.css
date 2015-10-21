@@ -16,9 +16,9 @@ div.container.wyncoholics h1 {
   text-shadow: 3px 3px 10px gray;
 }
 
-div.container .btn {
+/*div.container .btn {
   font-size: 3em;
-}
+}*/
 
 div.container .btn:hover {
   color: #ffffff;

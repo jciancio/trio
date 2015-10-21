@@ -43,16 +43,6 @@
   <%= @user.zip_code %>
 </p>
 
-<p>
-  <strong>Credit Card Type:</strong>
-  <%= @user.credit_card_type %>
-</p>
-
-<p>
-  <strong>Credit Card:</strong>
-  <%= @user.credit_card %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Start Shopping', products_path(@products) %>
+<%= link_to 'Edit', edit_user_path(@user), class: "btn btn-info" %> |
+<%= link_to 'Start Shopping', products_path(@products), class: "btn btn-info" %>
 </div>
