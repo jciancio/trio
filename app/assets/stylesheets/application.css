@@ -20,3 +20,7 @@ body {
   -o-background-size: center;
   background-size: center;
 }
+
+.confirm {
+  text-align: center;
+}
