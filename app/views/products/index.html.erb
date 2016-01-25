@@ -1,28 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
+<h1>Alcohol Selection</h1>
 
-<table>
+<div class="container search">
+<%= form_tag '/search' do %>
+  <%= search_field_tag :term %>
+  <%= submit_tag 'Search' %>
+<% end %>
+</div>
+
+<table class="table talbe-striped">
   <thead>
     <tr>
       <th>Name</th>
       <th>Description</th>
       <th>Price</th>
+<<<<<<< HEAD
       <th>image</th>
+=======
+      <th>Quantity</th>
+      <th>Picture</th>
+>>>>>>> 60137d1631d9e096f44edfc85d5b0769d16fbc35
       <th colspan="3"></th>
     </tr>
   </thead>
-
+  <%= link_to 'View Cart', charges_path, class: "btn btn-info cart" %> 
   <tbody>
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
         <td><%= product.description %></td>
         <td><%= product.formatted_price %></td>
+<<<<<<< HEAD
         <td><%= product.picture.url %></td>image_tag 
+=======
+        <td><%= number_field :user, :id %></td>
+        <td><%= image_tag product.url %></td>
+        <td><%= link_to 'Add to Cart', products_path, class: "btn btn-info", method: :get, data: {confirm: 'Are you sure you want to add this to your cart?' } %></td>
+>>>>>>> 60137d1631d9e096f44edfc85d5b0769d16fbc35
         <td><%= link_to 'Show', product, class: "btn btn-info" %></td>
-        <td><%= link_to 'Edit', edit_product_path(product), class: "btn btn-info" %></td>
-        <td><%= link_to 'Destroy', product, class: "btn btn-info", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!-- <td><%= link_to 'Edit', edit_product_path(product), class: "btn btn-info" %></td>
+        <td><%= link_to 'Destroy', product, class: "btn btn-info", method: :delete, data: { confirm: 'Are you sure?' } %></td>  -->
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +48,4 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<!-- <%= link_to 'New Product', new_product_path %> -->

@@ -1,0 +1,27 @@
+input {
+  opacity: .5;
+}
+
+input:hover {
+  opacity: 1;
+}
+
+input:focus {
+  opacity: 1;
+}
+
+textarea {
+  opacity: .5;
+}
+
+textarea:hover {
+  opacity: 1;
+}
+
+textarea:focus {
+  opacity: 1;
+}
+
+div.container.new_user h1 {
+  font-size: 5em;
+}

@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :pictures
+=======
+  resources :users
+>>>>>>> 60137d1631d9e096f44edfc85d5b0769d16fbc35
   resources :reviews
   resources :products
+  resources :charges
+
+  post '/search' => 'products#search'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
